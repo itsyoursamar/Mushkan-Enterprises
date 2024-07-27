@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  .spinner {
+    @apply w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-full relative;
+    border-top-color: transparent; /* Creates the gap effect */
+    animation: spin 1s linear infinite;
+  }
+
+  .spinner::before {
+    content: "";
+    @apply absolute inset-0 border-4 border-transparent rounded-full;
+    border-top-color: white; /* Color of the gap */
+    animation: spin 1s linear infinite;
+    z-index: -1;
+  }
+}
+
+/* styles.css */
+.slick-slide {
+  transition: filter 0.3s ease;
+}
+
+.slick-center .slick-slide {
+  filter: blur(0px);
+}
+
+.slick-slide:not(.slick-center) {
+  filter: blur(5px);
+}
+
+.slick-slide:hover {
+  filter: blur(0px);
+}
+
+
+  .circular-ring {
+    width: 4rem; /* Adjust size as needed */
+    height: 4rem;
+    border: 8px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-top: 8px solid white; /* Main border color */
+    border-radius: 50%;
+  }
+
+
+/* Add this to your global CSS file or Tailwind config */
+@keyframes slideInLeftOS {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightOS {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInLeftOS {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRightOS {
+  animation: slideInRight 0.6s ease-out;
+}
+
