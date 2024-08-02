@@ -47,9 +47,7 @@ export default function Navbar() {
             ? "sticky-navbar shadow-md bg-base-200  dark:bg-slate-700 dark:text-white duration-300 transition-all ease-in-out"
             : ""
         } `}
-        style={{
-          backgroundColor: sticky ? "" : "#FFCBCB",
-        }}
+        
       >
        <div className="navbar">
           <div className="navbar-start">

@@ -33,9 +33,6 @@ body {
   filter: blur(0px);
 }
 
-.slick-slide:not(.slick-center) {
-  filter: blur(5px);
-}
 
 .slick-slide:hover {
   filter: blur(0px);

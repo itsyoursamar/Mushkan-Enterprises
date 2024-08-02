@@ -14,7 +14,6 @@ export default function Login() {
           email: data.email,
           password: data.password,
       };
-  
       try {
           const response = await axios.post("https://me-server-sygl.onrender.com/login", userInfo, {
               headers: {
